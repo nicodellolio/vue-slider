@@ -42,8 +42,9 @@
 }
 
 .thumb {
-    height: calc((300px) / 5);
+    height: calc(((300px) / 5) -  4px);
     opacity: 0.5;
+    aspect-ratio: 3 / 1;
 }
 
 .thumb img {
