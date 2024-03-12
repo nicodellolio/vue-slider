@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            
+
             activeSlide: 0,
             slides: [
                 {
@@ -29,5 +29,21 @@ createApp({
                 }
             ]
         }
+    },
+    methods: {
+        prev() {
+            console.log("prev slide");
+            this.activeSlide--
+            if (this.activeSlide < 0) {
+                this.activeSlide = this.slides.length
+            }
+        }, 
+        next() {
+            console.log("next slide");
+            this.activeSlide++
+            if (this.activeSlide = this.slides.length) {
+                this.activeSlide = 0
+            }
+        },
     }
 }).mount('#app')

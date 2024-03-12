@@ -28,10 +28,10 @@
 
                 <!-- thumbnails section -->
                 <div class="thumbs">
-                    <button class="prev"></button>
-                    <button class="next"></button>
+                    <button class="prev" @click="prev()"></button>
+                    <button class="next" @click="next()"></button>
                     <div class="thumb">
-                        <img :src="slides.image" v-for="slides in slides"/>
+                        <img :src="slides.image" v-for="(slides, index) in slides" @click="activeSlide = index"/>
                     </div>
 
                 </div>
