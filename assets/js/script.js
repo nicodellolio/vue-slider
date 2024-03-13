@@ -27,7 +27,7 @@ slides = [
 createApp({
     data() {
         return {
-            
+
             activeSlide: 0,
             slides: slides
         }
@@ -47,6 +47,11 @@ createApp({
                 this.activeSlide = 0
             }
         },
+    },
+    mounted(){
+        setInterval(()=>{
+            this.next()
+        }, 3000)
     }
 }).mount('#app');
 
